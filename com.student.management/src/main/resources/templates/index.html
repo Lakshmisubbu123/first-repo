@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+<meta charset="ISO-8859-1">
+<title>Home page</title>
+</head>
+<body>
+ <h2> Student Management</h2>
+ <p th:if="${student_added}"
+ th:text="${student_added}"></p>
+ <p th:if="${student_updated}"
+ th:text="${student_updated}"></p>
+ <p th:if="${student_deleted}"
+ th:text="${student_deleted}"></p>
+ <a href="/openAddStudentPage"><button>ADD STUDENT</button> </a><br><br>
+ <a href="/openUpdateStudentPage"><button>UPDATE STUDENT</button> </a><br><br>
+ <a href="/openDeleteStudentPage"><button>DELETE STUDENT</button> </a><br><br>
+ <a href="/searchStudents"><button>SEARCH STUDENT</button> </a><br><br>
+ <a href="/fetchAllStudents"><button>GET ALL STUDENTS</button> </a><br><br>
+ <a href="/deleteAllStudents"><button>DELETE ALL STUDENTS</button> </a>
+</body>
+</html>
